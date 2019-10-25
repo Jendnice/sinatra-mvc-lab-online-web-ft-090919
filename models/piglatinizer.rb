@@ -38,11 +38,7 @@ class PigLatinizer
   
   attr_accessor :string
   
-  def initialize(string)
-    @string = string.downcase 
-  end 
-  
-  def piglatinize
+  def piglatinize(string)
     self.string = string 
     a = string.split(" ")
     b = a.map {|word| piglatinize_word(word)}
